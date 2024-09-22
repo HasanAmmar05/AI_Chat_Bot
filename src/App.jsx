@@ -103,6 +103,20 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-r from-slate-800 to-slate-900 text-white p-4">
       <div className="max-w-6xl mx-auto">
+
+      <a
+        href="https://github.com/HasanAmmar05/React_Groq_Chat_Bot"
+        target="_blank"
+        className="absolute top-4 right-4"
+      >
+        <button className="p-0.5 rounded-full from-indigo-400 via-pink-500 to-purple-500 bg-gradient-to-r">
+          <span className="block px-4 py-2 font-semibold rounded-full text-white transition hover:backdrop-brightness-110">
+            GitHub
+          </span>
+        </button>
+      </a>
+
+      
         <h1 className="text-4xl font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
           AI CHATBOT
         </h1>
