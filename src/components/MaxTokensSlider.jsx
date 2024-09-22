@@ -1,7 +1,9 @@
 const MaxTokensSlider = ({ maxTokens, onMaxTokensChange, maxValue }) => {
   return (
     <div className="flex flex-col">
-      <label htmlFor="max-tokens" className="mb-2 text-white font-semibold">Max Tokens: {maxTokens}</label>
+      <label htmlFor="max-tokens" className="mb-2 text-white font-semibold">
+        Max Tokens: {maxTokens}
+      </label>
       <input
         type="range"
         id="max-tokens"
