@@ -21,11 +21,11 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!input.trim()) return;
-  
+
     const newMessages = [...messages, { role: 'user', content: input }];
     setMessages(newMessages);
     setInput('');
-  
+
     try {
       const response = await generateChatResponse(newMessages, selectedModel, maxTokens);
       setMessages([...newMessages, { role: 'assistant', content: response }]);
@@ -40,17 +40,17 @@ function App() {
   }, [selectedModel]);
 
   return (
-    <div className="min-h-screen bg-background text-text p-4">
-      <h1 className="text-3xl font-bold text-center mb-4"> AI CHATBOT</h1>
-      <p className="text-center mb-8"> Powered with Advanced LLM's</p>
+    <div className="min-h-screen bg-gradient-to-r from-slate-500 to-slate-800 text-white p-4">
+      <h1 className="text-4xl font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">AI CHATBOT</h1>
+      <p className="text-center mb-8 text-gray-300">Powered Advanced LLM's</p>
 
-      <div className="max-w-4xl mx-auto bg-input p-6 rounded-lg shadow-lg mb-8">
-        <div className="flex justify-between mb-4">
+      <div className="max-w-4xl mx-auto bg-gradient-to-br from-gray-800 to-gray-700 p-6 rounded-lg shadow-2xl mb-8">
+        <div className="flex flex-col md:flex-row justify-between mb-4 space-y-4 md:space-y-0 md:space-x-4">
           <ModelSelector models={models} selectedModel={selectedModel} onModelChange={setSelectedModel} />
           <MaxTokensSlider maxTokens={maxTokens} onMaxTokensChange={setMaxTokens} maxValue={models[selectedModel].tokens} />
         </div>
 
-        <div className="h-96 overflow-y-auto mb-4 p-4 bg-gray-800 rounded">
+        <div className="h-96 overflow-y-auto mb-4 p-4 bg-gray-900 rounded-lg shadow-inner">
           {messages.map((message, index) => (
             <ChatMessage key={index} role={message.role} content={message.content} />
           ))}
@@ -61,17 +61,17 @@ function App() {
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            className="flex-grow bg-gray-700 text-text p-2 rounded-l"
+            className="flex-grow bg-gray-700 text-white p-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
             placeholder="Enter your prompt here..."
           />
-          <button type="submit" className="bg-primary text-white px-4 py-2 rounded-r hover:bg-secondary transition duration-300">
+          <button type="submit" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-r-lg hover:from-purple-600 hover:to-pink-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400">
             Send
           </button>
         </form>
       </div>
 
-      <footer className="text-center mt-8 p-4 bg-secondary rounded-lg">
-        <p> Created By Hasan using React and Tailwind CSS</p>
+      <footer className="text-center mt-8 p-4 bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg">
+        <p className="text-gray-300 text-5xl "> Created By Hasan </p>
       </footer>
     </div>
   );

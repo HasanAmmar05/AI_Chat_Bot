@@ -7,14 +7,10 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        primary: '#1abc9c',
-        secondary: '#2c3e50',
-        background: '#1e1e1e',
-        text: '#ecf0f1',
-        accent: '#e74c3c',
-        input: '#2c2c2c',
-      },
+      gradientColorStops: theme => ({
+        'primary': '#8B5CF6',
+        'secondary': '#EC4899',
+      })
     },
   },
   plugins: [],
