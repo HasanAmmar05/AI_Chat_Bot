@@ -71,9 +71,9 @@ function App() {
       <h1 className="text-4xl font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
         AI CHATBOT
       </h1>
-      <p className="text-center mb-8 text-gray-300">Powered Advanced LLM's</p>
+      <p className="text-center mb-8 text-gray-300">Powered with Advanced LLM's</p>
 
-      <div className="max-w-4xl mx-auto bg-gradient-to-br from-gray-800 to-gray-700 p-6 rounded-lg shadow-2xl mb-8">
+      <div className="max-w-7xl mx-auto bg-gradient-to-br from-gray-800 to-gray-700 p-6 rounded-lg shadow-2xl mb-8">
         <div className="flex flex-col md:flex-row justify-between mb-4 space-y-4 md:space-y-0 md:space-x-4">
           <ModelSelector
             models={models}
@@ -87,7 +87,7 @@ function App() {
           />
         </div>
 
-        <div className="h-96 overflow-y-auto mb-4 p-4 bg-gray-900 rounded-lg shadow-inner">
+        <div className="min-h-[600px] w-full overflow-y-auto mb-4 p-4 bg-gray-900 rounded-lg shadow-inner">
           {messages.map((message, index) => (
             <ChatMessage
               key={index}
@@ -120,5 +120,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
