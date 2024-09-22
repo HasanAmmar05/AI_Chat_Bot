@@ -3,7 +3,7 @@
 A modern, responsive chat application powered by Groq's advanced language models, built with React, Vite, and Tailwind CSS.
 
 # CHATBOT Link:
-
+https://kaleidoscopic-sunflower-5bab88.netlify.app/
 
 ## Features
 
@@ -74,13 +74,3 @@ Contributions to the Groq Chat React App are welcome. Please follow these steps:
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-## Acknowledgements
-
-- [React](https://reactjs.org/)
-- [Vite](https://vitejs.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Groq API](https://groq.com/)
-
-## Contact
-
-If you have any questions or feedback, please open an issue on GitHub or contact the maintainer at your-email@example.com.
