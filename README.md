@@ -1,4 +1,4 @@
-# Groq Chat React App
+# Groq AI ChatBot
 
 A modern, responsive chat application powered by Groq's advanced language models, built with React, Vite, and Tailwind CSS.
 
